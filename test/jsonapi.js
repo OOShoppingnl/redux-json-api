@@ -30,8 +30,8 @@ const state = {
     host: null,
     path: null,
     headers: {
-      'Content-Type': 'application/vnd.api+json',
-      Accept: 'application/vnd.api+json'
+      'Content-Type': 'application/json',
+      Accept: 'application/json'
     }
   },
   users: {
@@ -401,8 +401,8 @@ describe('Endpoint values', () => {
   it('should default to jsonapi content type and accept headers', () => {
     const initialState = reducer(undefined, { type: '@@INIT' });
     expect(initialState.endpoint.headers).toEqual({
-      'Content-Type': 'application/vnd.api+json',
-      Accept: 'application/vnd.api+json'
+      'Content-Type': 'application/json',
+      Accept: 'application/json'
     });
   });
 
